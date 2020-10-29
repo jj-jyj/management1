@@ -2,12 +2,16 @@
 import VueRouter from "vue-router";
 import Vue from 'vue'
 
-//1.通过Vue.use(插件),安装插件
-Vue.use(VueRouter)
+const Login =()=>import ('../views/login/Login')
 
+//1.通过Vue.use(插件),安装插件
+Vue.use(VueRouter);
 //2.创建VueRouter 对象
 const routes = [
-
+	{
+	path:'/login',
+	component:Login
+	},
 ]
 const router = new VueRouter({
   //配置路由和组件之间的应用关系
