@@ -11,18 +11,20 @@ Vue.use(VueRouter);
 //2.创建VueRouter 对象
 const routes = [
 	{
+	name:'login',
 	path:'/login',
 	component:Login
 	},
 	{
-	path:'/home',
+	name:'home',
+	path:'/',
 	component:Home
 	},
 ]
 const router = new VueRouter({
   //配置路由和组件之间的应用关系
   routes,
-  mode:'history'
+//   mode:'history'
 })
 
 //3.将router对象导出到Vue 实例中

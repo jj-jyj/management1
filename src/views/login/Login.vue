@@ -42,7 +42,7 @@ export default {
 			// 0.保存token值
 			localStorage.setItem('token',data.token)
 			// 1.跳转首页
-			this.$router.push('home')  //路由跳转	
+			this.$router.push({name:'home'})  //路由跳转	
 			// 2.弹窗提示成功
 			this.$message.success(msg)
 		}else{
