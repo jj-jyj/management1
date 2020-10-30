@@ -25,20 +25,18 @@
     	<el-aside width="200px" class="body-left">
 			<!-- element的导航组件 -->
 			<el-menu 
+			:router="true"
 			:unique-opened="true">
     		  <el-submenu index="1">
     		    <template slot="title">
     		      <i class="el-icon-location"></i>
     		      <span>用户管理</span>
     		    </template>
-    		      <el-menu-item index="1-1">
+    		      <el-menu-item index="user">
 					  <i class="el-icon-menu"></i>
 					  <span>用户列表</span>
 				  </el-menu-item>
     		  </el-submenu>
-    		</el-menu>
-			<el-menu 
-			active-text-color="true">
     		  <el-submenu index="2">
     		    <template slot="title">
     		      <i class="el-icon-location"></i>
@@ -54,7 +52,9 @@
 	  	</el-aside>
 
 		<!-- 右边 -->
-      <el-main class="body-right">Main</el-main>
+      <el-main class="body-right">
+		  <router-view></router-view>
+	  </el-main>
     </el-container>
   </el-container>
 </template>

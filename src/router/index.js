@@ -4,6 +4,8 @@ import Vue from 'vue'
 
 const Login =()=>import ('../views/login/Login');
 const Home =()=>import ('../views/home/Home');
+const User =()=>import ('../views/user/User');
+
 
 
 //1.通过Vue.use(插件),安装插件
@@ -18,7 +20,12 @@ const routes = [
 	{
 	name:'home',
 	path:'/',
-	component:Home
+	component:Home,
+	children:[{
+		name:'user',
+		path:'user',
+		component:User
+	}]
 	},
 ]
 const router = new VueRouter({
