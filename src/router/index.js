@@ -31,7 +31,7 @@ const routes = [
 const router = new VueRouter({
   //配置路由和组件之间的应用关系
   routes,
-//   mode:'history'
+  mode:'history'
 })
 
 //3.将router对象导出到Vue 实例中
